@@ -9,6 +9,7 @@ import ChatWindow from "../components/ChatWindow.jsx";
 import RoomModal from "../components/RoomModal.jsx";
 import ProfileModal from "../components/ProfileModal.jsx";
 
+//chat page component that handles the main chat functionality, including room management and user interactions
 export default function Chat() {
   const { user, logout } = useAuth();
   const [rooms, setRooms] = useState([]);

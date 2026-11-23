@@ -3,7 +3,7 @@ import api, { errMsg } from "../lib/api.js";
 import { idOf } from "../lib/helpers.js";
 import { Button, ErrorText, Field, Modal } from "./ui.jsx";
 
-// Used for both creating (POST /rooms) and editing (PATCH /rooms/:id)
+// Used for both creating (POST /rooms) and editing (PATCH /rooms/:id) endpoints
 export default function RoomModal({ room, onClose, onSaved }) {
   const editing = !!room;
   const [form, setForm] = useState({
