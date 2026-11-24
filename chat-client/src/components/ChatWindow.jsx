@@ -64,11 +64,11 @@ export default function ChatWindow({
       const res = await api.get(`/room/${roomId}/members`);
       setMembers(pick(res, "members") || []);
     } catch {
-      /* panel just stays empty */
+      /* panel just stays empty in the app*/
     }
   }, [roomId]);
 
-  // Message history: GET /rooms/:roomId/messages?page&limit
+  // Message history: GET /rooms/:roomId/messages?page&limit endpoint
   const loadHistory = useCallback(
     async (p) => {
       setLoading(true);
